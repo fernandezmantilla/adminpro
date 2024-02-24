@@ -10,26 +10,30 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 
 
 const routes: Routes = [
-    {
-        path: 'dashboard',
-        component: PagesComponent,
-        children: [
-          {
-            path: '', component: DashboardComponent},
-          {
-            path: 'progress', component: ProgressComponent },
-          {
-            path: 'grafica1', component: Grafica1Component },
-            {
-              path: 'account-settings', component: AccountSettingsComponent }
-
-        ]
+  {
+    path: 'dashboard',
+    component: PagesComponent,
+    children: [
+      {
+        path: '', component: DashboardComponent
       },
-   
+      {
+        path: 'progress', component: ProgressComponent
+      },
+      {
+        path: 'grafica1', component: Grafica1Component
+      },
+      {
+        path: 'account-settings', component: AccountSettingsComponent
+      }
+
+    ]
+  },
+
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class PagesRoutingModule {}
+export class PagesRoutingModule { }
